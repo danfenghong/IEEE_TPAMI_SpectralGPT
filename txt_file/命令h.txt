@@ -1,0 +1,41 @@
+cd /media/ps/sda2/LXY/croma_linux2/test_demo
+
+python main_finetune.py --wandb siamese_finetune --batch_size 128 --accum_iter 2 --blr 0.002 --epochs 150 --num_workers 16 --nb_classes 10 --input_size 120  --patch_size 8 --weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 --model_type siamese --dataset_type euro_sat --dropped_bands 10 --train_path /media/ps/sda2/LXY/croma_linux2/t
+est_demo/txt_file/train_euro_result.txt --test_path /media/ps/sda2/LXY/croma_linux2/test_demo/txt_file/val_euro_result.txt
+
+python main_finetune.py --wandb siamese_finetune --batch_size 128 --accum_iter 4 --blr 0.0008 \
+--epochs 200 --num_workers 16 --nb_classes 10 --input_size 128 --model vit_base_patch8_128 --patch_size 8 \
+--weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 --model_type siamese \
+--dataset_type euro_sat --dropped_bands 10 \
+--train_path /media/ps/sda2/LXY/croma_linux2/test_demo/txt_file/train_euro_result.txt \
+--test_path /media/ps/sda2/LXY/croma_linux2/test_demo/txt_file/val_euro_result.txt \
+--finetune /media/ps/sda2/LXY/croma_linux2/pretrain_ssl/output_dir/new_mask0.75_6/checkpoint-153.pth
+
+python main_finetune.py --wandb siamese_finetune --batch_size 128 --accum_iter 4 --blr 0.0002 --epochs 200 --num_workers 16 --nb_classes 10 --input_size 128 --model vit_base_patch8_128 --patch_size 8  --weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 --model_type siamese  --dataset_type euro_sat --dropped_bands 10 --train_path /media/ps/sda1/LXY/SatMAE-main/SatMAE-main/train_euro_result.txt --test_path //media/ps/sda1/LXY/SatMAE-main/SatMAE-main/val_euro_result.txt --output_dir ./experiments/eurosat_pretrain --log_dir ./experiments/eurosat_pretrain --finetune /media/ps/sda1/LXY/CROMA_linux/pretrain_ssl/output_dir/new_mask0.90/checkpoint-100.pth
+python -m torch.distributed.launch --nproc_per_node=4 \
+--master_port=25641 main_finetune.py \
+--wandb satmae_finetune --batch_size 16 --accum_iter 8 --blr 0.0001 \
+--epochs 150 --num_workers 16 --nb_classes 10 --input_size 120 \
+--model vit_base_patch8_120 --patch_size 8  \
+--weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
+--model_type tensor  --dataset_type euro_sat --dropped_bands 10 \
+--train_path /media/ps/sda1/LXY/SatMAE-main/SatMAE-main/train_euro_result.txt \
+--test_path /media/ps/sda1/LXY/SatMAE-main/SatMAE-main/val_euro_result.txt \
+--output_dir ./experiments/eurosat_finetune --log_dir ./experiments/eurosat_finetune
+
+
+
+#no_output_dir
+python -m torch.distributed.launch --nproc_per_node=1 \
+--master_port=25655 main_finetune.py \
+--wandb siamese_finetune --batch_size 128 --accum_iter 4 --blr 0.0005 \
+--epochs 300 --num_workers 16 --nb_classes 10 --input_size 120 \
+--model vit_base_patch8_120 --patch_size 8  \
+--weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
+--model_type siamese  --dataset_type euro_sat --dropped_bands 10 \
+--train_path /media/ps/sda1/LXY/SatMAE-main/SatMAE-main/train_euro_result.txt \
+--test_path //media/ps/sda1/LXY/SatMAE-main/SatMAE-main/val_euro_result.txt \
+--log_dir ./experiments/eurosat_no_pretrain \
+--finetune /media/ps/sda1/LXY/CROMA_linux/pretrain_ssl/output_dir/checkpoint-100.pth
+ 
+
