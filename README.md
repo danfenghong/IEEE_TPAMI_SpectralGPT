@@ -153,7 +153,7 @@ If you found our project helpful, please kindly cite our paper:
   title={SpectralGPT: Spectral foundation model},
   author={Hong, Danfeng and Zhang, Bing and Li, Xuyang and Li, Yuxuan and Li, Chenyu and Yao, Jing and Ghamisi, Pedram and Yokoya, Naoto and Li, Hao and Jia, Xiuping and Plaza, Antonio and others},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  doi={10.1109/TPAMI.2024.3362475},
+  note={DOI:10.1109/TPAMI.2024.3362475},
   year={2024}
 }
 ```
