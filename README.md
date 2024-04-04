@@ -1,5 +1,5 @@
 <div align="center">
-<h1>SpectralGPT: Spectral Remote Sensing Foundation Model </h1>
+<h1>SpectralGPT: Spectral Remote Sensing Foundation Model, IEEE TPAMI, 2024 </h1>
   
 This is the official repository for the paper 
 "_SpectralGPT: Spectral Remote Sensing Foundation Model_".  
