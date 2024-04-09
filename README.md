@@ -34,7 +34,7 @@ You can download the official EuroSAT dataset [here](https://github.com/phelber/
 
 You can download the official OSCD dataset [here](https://ieee-dataport.org/open-access/oscd-onera-satellite-change-detection) for finetuning the pretrained model on change detection tasks. 
 
-You can download the official SegMunich dataset we collected [here](https://pan.baidu.com/s/1ouz_FVOdENjkAZRajjkjVw?pwd=994z) for finetuning the pretrained model on semantic segmentation tasks.
+You can download the official SegMunich dataset we collected [here](https://pan.baidu.com/s/1ouz_FVOdENjkAZRajjkjVw?pwd=994z) or [here](https://huggingface.co/datasets/Moonboy12138/SegMunich/blob/main/TUM_128.zip) for finetuning the pretrained model on semantic segmentation tasks.
 
 Dataset                  |Use| Link |  
 ---------------------- | -------------- | -------- 
