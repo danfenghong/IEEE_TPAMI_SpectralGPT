@@ -11,3 +11,7 @@ python predict.py
 cd /downstream_predict/SegMunich
 python predict.py
 ```
+
+### Downstream Task Finetuned File
+
+Will be updated on the [zenodo](10.5281/zenodo.8412377) soon. 
