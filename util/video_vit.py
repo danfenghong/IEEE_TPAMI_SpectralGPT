@@ -75,7 +75,7 @@ class PatchEmbed(nn.Module):
         return x
 
 
-class Attention_original(nn.Module):
+class Attention(nn.Module):
     def __init__(
         self,
         dim,
@@ -118,45 +118,6 @@ class Attention_original(nn.Module):
             .reshape(B, N, self.num_heads, C // self.num_heads)
             .permute(0, 2, 1, 3)
         )
-
-        attn = (q @ k.transpose(-2, -1)) * self.scale
-
-        attn = attn.softmax(dim=-1)
-
-        x = (attn @ v).transpose(1, 2).reshape(B, N, C)
-        x = self.proj(x)
-        x = self.proj_drop(x)
-        x = x.view(B, -1, C)
-        return x
-
-class Attention(nn.Module):
-    def __init__(
-        self,
-        dim,
-        num_heads=8,
-        qkv_bias=False,
-        qk_scale=None,
-        attn_drop=0.0,
-        proj_drop=0.0,
-        input_size=(4, 14, 14),
-    ):
-        super().__init__()
-        assert dim % num_heads == 0, "dim should be divisible by num_heads"
-        self.num_heads = num_heads
-        head_dim = dim // num_heads
-        self.scale = qk_scale or head_dim**-0.5
-
-        self.to_qkv = nn.Linear(dim, dim * 3, bias=qkv_bias)
-        assert attn_drop == 0.0  # do not use
-        self.proj = nn.Linear(dim, dim)
-        self.proj_drop = nn.Dropout(proj_drop)
-        self.input_size = input_size
-        assert input_size[1] == input_size[2]
-
-    def forward(self, x):
-        B, N, C = x.shape
-        q, k, v = self.to_qkv(x).chunk(3, dim=-1)  # (BSZ, num_patches, dim)
-        q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h=self.num_heads), (q, k, v))
 
         attn = (q @ k.transpose(-2, -1)) * self.scale
 
