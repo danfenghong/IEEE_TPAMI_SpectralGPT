@@ -134,7 +134,7 @@ python -m torch.distributed.launch --nproc_per_node=2 \
 --master_port=25643 --use_env train_multi_GPU_new.py
 ```
 ### Model Weights
-We have already uploaded our model checkpoints [here](https://zenodo.org/records/8412455).
+We have already uploaded our model checkpoints [here](https://zenodo.org/records/8412377).
 The [SpectralGPT.pth](https://zenodo.org/records/8412455/files/SpectralGPT.pth?download=1) checkpoint has been trained for 200 epochs on fMoW-Sentinel Dataset and the [SpectralGPT+.pth](https://zenodo.org/records/8412455/files/SpectralGPT+.pth?download=1) has been continual pretrained on BigEarthNet Dataset for 100 epochs. 
 
 
