@@ -94,7 +94,7 @@ torchrun --nproc_per_node=2 main_finetune.py \
 --input_size 128 --patch_size 8  \
 --weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
 --model_type tensor \
---model mae_vit_base_patch8_128 \
+--model vit_base_patch8_128 \
 --dataset_type euro_sat --dropped_bands 10 \
 --train_path .txt_file/train_euro_result.txt \
 --test_path .txt_file/val_euro_result.txt \
