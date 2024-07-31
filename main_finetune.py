@@ -289,7 +289,7 @@ def main(args):
         # for k in ['pos_embed_spatial','patch_embed.proj.weight', 'decoder_pos_embed_spatial','patch_embed.proj.bias', 'head.weight', 'head.bias']:
         # for k in ['pos_embed', 'patch_embed.0.proj.weight','patch_embed.1.proj.weight','patch_embed.2.proj.weight', 'patch_embed.2.proj.bias', 'head.weight', 'head.bias','pos_embed_spatial','pos_embed_temporal']:
         for k in ['patch_embed.0.proj.weight', 'patch_embed.1.proj.weight', 'patch_embed.2.proj.weight',
-                  'patch_embed.2.proj.bias', 'head.weight', 'head.bias', 'pos_embed_spatial', 'pos_embed_temporal']:
+                  'patch_embed.2.proj.bias', 'head.weight', 'head.bias']:
             if k in checkpoint_model and checkpoint_model[k].shape != state_dict[k].shape:
                 print(f"Removing key {k} from pretrained checkpoint")
                 del checkpoint_model[k]
