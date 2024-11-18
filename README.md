@@ -154,7 +154,7 @@ Danfeng Hong, Bing Zhang, Xuyang Li, Yuxuan Li, Chenyu Li, Jing Yao, Naoto Yokoy
 ```
 @article{hong2024spectralgpt,
   title={SpectralGPT: Spectral remote sensing foundation model},
-  author={Hong, Danfeng and Zhang, Bing and Li, Xuyang and Li, Yuxuan and Li, Chenyu and Yao, Jing and Ghamisi, Pedram and Yokoya, Naoto and Li, Hao and Jia, Xiuping and Plaza, Antonio and others},
+  author={Hong, Danfeng and Zhang, Bing and Li, Xuyang and Li, Yuxuan and Li, Chenyu and Yao, Jing and Ghamisi, Pedram and Yokoya, Naoto and Li, Hao and Jia, Xiuping and Plaza, Antonio and Gamba, Paolo and Benediktsson, Jon Atli and Chanussot, Jocelyn},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   volumn={46},
   number={8},
