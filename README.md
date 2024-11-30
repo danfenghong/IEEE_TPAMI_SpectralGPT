@@ -6,7 +6,7 @@ This is the official repository for the paper
 
 **IEEE TPAMI: (https://ieeexplore.ieee.org/document/10490262)
 
-[Danfeng Hong](https://scholar.google.com/citations?hl=en&user=n7gL0_IAAAAJ&view_op=list_works&sortby=pubdate), [Bing Zhang](https://scholar.google.com/citations?user=nHup8tQAAAAJ&hl=en), Xuyang Li, Yuxuan Li, Chenyu Li, Jing Yao, [Naoto Yokoya](https://scholar.google.com/citations?user=DJ2KOn8AAAAJ&hl=en), [Hao Li](https://scholar.google.com/citations?hl=en&user=yECGOCwAAAAJ), [Pedram Ghamisi](https://scholar.google.com/citations?user=Gr9afd0AAAAJ&hl=en), [Xiuping Jia](https://scholar.google.com/citations?user=-vl0ZSEAAAAJ&hl=en), [Antonio Plaza](https://scholar.google.com/citations?user=F1UAj8oAAAAJ&hl=en), [Paolo Gamba](https://scholar.google.com/citations?user=9fiHXGwAAAAJ&hl=en), [Jon Atli Benediktsson](https://scholar.google.com/citations?user=C6d7qe0AAAAJ&hl=en), [Jocelyn Chanussot](https://scholar.google.com/citations?user=6owK2OQAAAAJ&hl=en)
+[Danfeng Hong](https://scholar.google.com/citations?hl=en&user=n7gL0_IAAAAJ&view_op=list_works&sortby=pubdate), Bing Zhang, Xuyang Li, Yuxuan Li, Chenyu Li, Jing Yao, Naoto Yokoya, Hao Li, Pedram Ghamisi, Xiuping Jia, Antonio Plaza, Paolo Gamba, Jon Atli Benediktsson, Jocelyn Chanussot
 </div>
 
 ## Abstract
